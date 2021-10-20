@@ -1,27 +1,26 @@
 package Employeewageprogram;
 
-public class Employeeparttime {
-	public static void main(String[] args)
-	 {
-		int Emp_wage_per_hrs = 20;
-		int Emp_work_hrs = 0;
-		int Full_time = 2;
-		int Part_time = 1;
-		double empcheck = Math.floor(Math.random()*10)%3;
-		if (empcheck == Full_time) 
+public class Employeeusecase {
+	
+	public static final int Emp_wage_per_hrs = 20;
+	public static final int Part_time = 1;
+	public static final int Full_time = 2;
+		
+public static void main(String[] args)
+{
+	    int Emp_work_hrs = 0;
+		int empcheck = (int)((Math.random())*10)%3;
+		switch (empcheck)
 		{
+			case Full_time:
 			Emp_work_hrs = 8;
-		System.out.println("Employee is present");
-		}
-		else if (empcheck == Part_time) 
-		{
+			break;
+			case Part_time:
 			Emp_work_hrs = 4;
-		System.out.println("Employee is present half day");
-		}
-		else
-		{
+			break;
+			default:
 			Emp_work_hrs = 0;
-		System.out.println("Employee is absent");
+			break;
 		}
 		int emp_wage = Emp_work_hrs * Emp_wage_per_hrs;
 		System.out.println("Employee Wage : "+emp_wage);
